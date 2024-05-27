@@ -22,6 +22,8 @@ public class Medico {
 
     private String email;
 
+    private String telefone;
+
     private String crm;
 
     @Enumerated(EnumType.STRING)
@@ -33,6 +35,7 @@ public class Medico {
     public Medico(MedicoDTO json){
         this.nome = json.nome();
         this.email = json.email();
+        this.telefone = json.telefone();
         this.crm = json.crm();
         this.especialidade = json.especialidade();
         this.endereco = new Endereco(json.endereco());
